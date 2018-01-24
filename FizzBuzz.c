@@ -5,12 +5,11 @@
 
 #include <stdio.h>
 
-// fizzBuzzStartAndEnd() prints fizz buzz from the inputted starting integer
-// to the ending integer.
+// fizzBuzzStart(start) prints fizz buzz from the inputted starting integer
+// to 30.
 // input: int start -> starting integer
-//        int end   -> ending integer
-void fizzBuzzStartAndEnd (int start, int end) {
-  for (int i=start; i<=end; i++) {
+void fizzBuzzStart(int start) {
+  for (int i=start; i<=30; i++) {
     if ((i%3==0) && (i%5==0)) {
       printf("FizzBuzz\n");
     } else if (i%3==0) {
@@ -23,7 +22,39 @@ void fizzBuzzStartAndEnd (int start, int end) {
   }
 }
 
+// fizzBuzzEnd(end) prints fizz buzz from 1 until the inputted ending integer.
+// input: int end -> ending integer
+void fizzBuzzEnd(int end) {
+  for (int i=1; i<=end; i++) {
+    if ((i%3==0) && (i%5==0)) {
+      printf("FizzBuzz\n");
+    } else if (i%3==0) {
+      printf("Fizz\n");
+    } else if (i%5==0) {
+      printf("Buzz\n");
+    } else {
+      printf("%d\n", i);
+    }
+  }
+}
 
+// fizzBuzzStartAndEnd(start, end) prints fizz buzz from the inputted starting
+// integer to the ending integer.
+// input: int start -> starting integer
+//        int end   -> ending integer
+void fizzBuzzStartAndEnd(int start, int end) {
+  for (int i=start; i<=end; i++) {
+    if ((i%3==0) && (i%5==0)) {
+      printf("FizzBuzz\n");
+    } else if (i%3==0) {
+      printf("Fizz\n");
+    } else if (i%5==0) {
+      printf("Buzz\n");
+    } else {
+      printf("%d\n", i);
+    }
+  }
+}
 
 // printFizzBuzz() prints the integers from 1 to 20 where every multiple of 3 is
 // replaced by fizz, every multiple of 5 is replaced by buzz, and every multiple
