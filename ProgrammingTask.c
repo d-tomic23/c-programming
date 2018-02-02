@@ -60,4 +60,5 @@ int main(void) {
   (assert (factorial1_for(4) == 24));
   factorial_while();
   factorial_for();
+  return(0);
 }
